@@ -73,13 +73,19 @@ nav.top .row{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  height: 88px;
+  height: 112px;
 }
 .wordmark{
   display:flex;
-  align-items:baseline;
+  align-items:center;
   gap: 16px;
 }
+.wordmark .logo-img{
+  height: 78px;
+  width: auto;
+  display: block;
+}
+/* legacy text fallbacks (unused once logo image is in place) */
 .wordmark .mark{
   font-family: var(--serif);
   font-weight: 400;
