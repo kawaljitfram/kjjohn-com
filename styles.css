@@ -840,6 +840,82 @@ section.no-top-rule{ border-top: 0; }
 }
 
 /* ============================================================== */
+/*  DISCLAIMER MODAL (first-visit, Bar Council compliance)        */
+/* ============================================================== */
+.disclaimer-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+  background:
+    linear-gradient(135deg, rgba(245,239,229,0.985) 0%, rgba(232,213,200,0.985) 55%, rgba(220,180,170,0.985) 100%),
+    var(--bone);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  animation: disclaimer-fade-in 0.4s ease-out;
+}
+@keyframes disclaimer-fade-in{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+.disclaimer-modal{
+  width: 100%;
+  max-width: 920px;
+  padding: 16px 0;
+  text-align: center;
+}
+.disclaimer-modal h2{
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin-bottom: 32px;
+  text-align: left;
+  padding-left: 8px;
+}
+.disclaimer-modal p{
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-bottom: 40px;
+  text-wrap: pretty;
+}
+.disclaimer-actions{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.disclaimer-btn{
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 14px 44px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--bone);
+  cursor: pointer;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+  border-radius: 0;
+}
+.disclaimer-btn:hover{ opacity: 0.85; }
+.disclaimer-btn.reject{
+  background: transparent;
+  color: var(--ink);
+}
+.disclaimer-btn.reject:hover{
+  background: rgba(14,27,44,0.05);
+  opacity: 1;
+}
+body.disclaimer-locked{ overflow: hidden; }
+
+/* ============================================================== */
 /*  FOOTER                                                         */
 /* ============================================================== */
 footer{
