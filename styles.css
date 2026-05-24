@@ -80,6 +80,16 @@ nav.top .row{
   align-items:center;
   gap: 16px;
 }
+.wordmark .logo-symbol{
+  height: 72px;
+  width: auto;
+  display: block;
+}
+.wordmark .logo-wordmark{
+  height: 44px;
+  width: auto;
+  display: block;
+}
 .wordmark .logo-img{
   height: 78px;
   width: auto;
