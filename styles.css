@@ -236,7 +236,7 @@ header.hero{
   margin: 0;
   overflow: hidden;
   background:
-    url("images/hero/chambers.jpg") center 40% / cover no-repeat,
+    url("images/hero/chambers.jpg?v=2") center 50% / cover no-repeat,
     var(--bone);
 }
 /* gentle bottom shadow so caption stays legible */
